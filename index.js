@@ -129,7 +129,7 @@ app.put("/books/:bookId/", async (request, response) => {
 //Delete Book API
 
 app.delete("/books/:bookId/", async (request, response) => {
-  const bookId = request.params;
+  const {bookId} = request.params;
   const deleteBookQuery = `
     DELETE FROM
         book
